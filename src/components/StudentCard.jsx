@@ -1,12 +1,11 @@
 import './StudentCard.css'
 function StudentCard(props) {
   const fiche = "fiche etudiant";
-  const ville = props.ville || "Non renseignée";
+  const ville = props.ville || "non renseigne";
 
   return (
     <div className="card">
       <img src={props.image} alt="Photo de l'étudiant" />
-      <h1>{fiche}</h1>
       <h1>{fiche}</h1>
       <p><strong>Nom&Prenom : </strong>{props.studentName}</p>
       <p><strong>Email :</strong> {props.email}</p>

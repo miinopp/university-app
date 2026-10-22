@@ -1,8 +1,7 @@
-import './Header.css'
 function Header() {
   return (
     <header>
-      <h1>Université de Sousse</h1>
+      <p1>ISIMA</p1>
     </header>
   );
 }

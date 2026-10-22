@@ -1,5 +1,5 @@
 import './App.css'
-import studentImage from './assets/student.jpeg'
+import studentImage from './assets/student.jpg'
 import StudentCard from './components/StudentCard.jsx'
 import Header from './components/Header.jsx'
 import Navbar from './components/Navbar.jsx'

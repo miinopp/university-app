@@ -1,8 +1,8 @@
-import './Footer.css'
+
 function Footer() {
   return (
     <footer>
-      <p>© 2026 - Université de Sousse</p>
+      <p2>Amine Khalfet</p2>
     </footer>
   );
 }
