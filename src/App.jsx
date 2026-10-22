@@ -1,28 +1,62 @@
-
 import './App.css'
-const fiche="fiche etudiant";
-const studentName ="Amine khalfet";
-const email ="khalfetamine@gmail.com";
-const tlf="+216 21 301 717";
-const fili="Glsi";
-const annee=2027;
-const grp="c";
-const ville="Mahdia";
-
-
+import studentImage from './assets/student.jpeg'
+import StudentCard from './components/StudentCard.jsx'
+import Header from './components/Header.jsx'
+import Navbar from './components/Navbar.jsx'
+import Footer from './components/Footer.jsx'
+const etudiants = [
+  {
+    studentName: "Amine khalfet",
+    email: "khalfetamine@gmail.com",
+    tlf: "+216 21 301 717",
+    fili: "Glsi",
+    annee: 2027,
+    grp: "c",
+    ville: "Mahdia",
+    image: studentImage,
+  },
+  {
+    studentName: "Sarra Trabelsi",
+    email: "sarra.trabelsi@gmail.com",
+    tlf: "+216 22 345 678",
+    fili: "Glsi",
+    annee: 2027,
+    grp: "b",
+    ville: "Sousse",
+    image: studentImage,
+  },
+  {
+    studentName: "Mariem Khalfallah",
+    email: "mariem.khalfallah@gmail.com",
+    tlf: "+216 27 567 890",
+    fili: "Glsi",
+    annee: 2027,
+    grp: "a",
+    ville: "Mahdia",
+    image: studentImage,
+  },
+];
 function App() {
-
   return (
-   <div>
-    <h1> {fiche}</h1>
-    <p><strong>Nom&Prenom : </strong>{studentName}</p>
-    <p><strong>Email :</strong> {email}</p>
-    <p><strong>Telephone :</strong> {tlf}</p>
-    <p><strong>Filiere : </strong>{fili}</p>
-    <p><strong>annee d'etude :</strong> {annee}</p>
-    <p><strong>grp :</strong> {grp}</p>
-    <p><strong>Ville :</strong> {ville}</p>
-   </div>
+    <div>
+      <Header />
+      <Navbar />
+      {etudiants.map((etudiant) => (
+        <StudentCard
+          key={etudiant.email}
+          studentName={etudiant.studentName}
+          email={etudiant.email}
+          tlf={etudiant.tlf}
+          fili={etudiant.fili}
+          annee={etudiant.annee}
+          grp={etudiant.grp}
+          ville={etudiant.ville}
+          image={etudiant.image}
+        />
+      ))}
+      <Footer />
+    </div>
   );
 }
+
 export default App
